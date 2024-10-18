@@ -48,6 +48,7 @@ public class M01 {
                 performa = Integer.parseInt(kredit) * ket;
                 System.out.println(toFixed(performa,1));
             }
+            System.out.println("");
         } while (!kredit.equals("---") && !nilaihuruf.equals("---"));
     }
     
