@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="M01"/>
+        <attribute name="authors" value="boyha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-18 10:27:33 AM"/>
+        <attribute name="created" value="Ym95aGE7Qk9ZOzIwMjQtMTAtMTg7MDk6NTQ6NTcgQU07MjA0Mg=="/>
+        <attribute name="edited" value="Ym95aGE7Qk9ZOzIwMjQtMTAtMTg7MTA6MjM6MTQgQU07MTsyMTMx"/>
+        <attribute name="edited" value="QVNVUztTVU5OWS1MQVBUT1A7MjAyNC0xMC0xODsxMDoyNzozMyBBTTsyOzI2MTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilaiangka, ket, performa" type="Real" array="False" size=""/>
+            <declare name="nilaihuruf, kredit" type="String" array="False" size=""/>
+            <do expression="kredit!=&quot;---&quot; &amp;&amp; nilaihuruf!=&quot;---&quot;">
+                <input variable="kredit"/>
+                <input variable="nilaihuruf"/>
+                <if expression="kredit==&quot;---&quot; &amp;&amp; nilaihuruf==&quot;---&quot;">
+                    <then/>
+                    <else>
+                        <if expression="nilaihuruf==&quot;A&quot;">
+                            <then>
+                                <assign variable="ket" expression="4.0"/>
+                            </then>
+                            <else>
+                                <if expression="nilaihuruf==&quot;AB&quot;">
+                                    <then>
+                                        <assign variable="ket" expression="3.5"/>
+                                    </then>
+                                    <else>
+                                        <if expression="nilaihuruf==&quot;B&quot;">
+                                            <then>
+                                                <assign variable="ket" expression="3.0"/>
+                                            </then>
+                                            <else>
+                                                <if expression="nilaihuruf==&quot;BC&quot;">
+                                                    <then>
+                                                        <assign variable="ket" expression="2.5"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="nilaihuruf==&quot;C&quot;">
+                                                            <then>
+                                                                <assign variable="ket" expression="2.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="nilaihuruf==&quot;D&quot;">
+                                                                    <then>
+                                                                        <assign variable="ket" expression="1.0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="nilaihuruf==&quot;E&quot;">
+                                                                            <then>
+                                                                                <assign variable="ket" expression="0.0"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <assign variable="ket" expression="0.0"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <assign variable="performa" expression="ToInteger(kredit)*ket"/>
+                        <output expression="ToFixed(performa,1)" newline="True"/>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
