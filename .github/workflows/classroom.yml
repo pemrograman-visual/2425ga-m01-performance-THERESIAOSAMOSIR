@@ -161,7 +161,8 @@ jobs:
         input: |
           ---
           ---
-        expected-output: ''
+        expected-output:|
+        ''
         comparison-method: exact
         timeout: 1
         max-score: 20
