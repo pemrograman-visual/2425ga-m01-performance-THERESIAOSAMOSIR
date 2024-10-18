@@ -159,8 +159,8 @@ jobs:
         setup-command: javac M01.java
         command: java M01
         input: |
-          '---\n' +
-        '---',
+        ---
+        ---
 
         expected-output: ''
         comparison-method: exact
